@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="hamming code applet" default="default">
+	<description>
+		Hamming code in java applet, library for generating haming codes.	
+    </description>
+
+	<target name="default" depends="jar">	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="hc.jar">
+			<fileset dir="bin" id="jar.file.set">
+				<include name="**.class" />
+			</fileset>
+		</jar>
+	</target>
+
+	<target name="compile">
+		<javac srcdir="src/" destdir="bin" debug="on" />
+	</target>
+
+</project>

@@ -189,5 +189,6 @@ public final class HammingApplet extends JApplet implements ChangeListener {
 		updateStructurePanel();
 		fireUpdate();
 		invalidate();
+		repaint();
 	}
 }

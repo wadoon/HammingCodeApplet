@@ -1425,6 +1425,7 @@ public final class Grid
 	 * @param isRows If rows, and not columns, are to be divided.
 	 * @return One <code>ArrayList<LinkedDimGroup></code> for every row/column.
 	 */
+	@SuppressWarnings("unchecked")
 	private ArrayList<LinkedDimGroup>[] divideIntoLinkedGroups(boolean isRows)
 	{
 		boolean fromEnd = !(isRows ? lc.isTopToBottom() : LayoutUtil.isLeftToRight(lc, container));
@@ -2300,7 +2301,9 @@ public final class Grid
 		return newArr;
 	}
 
+	@SuppressWarnings("unchecked")
 	private static WeakHashMap[] PARENT_ROWCOL_SIZES_MAP = null;
+	@SuppressWarnings("unchecked")
 	private static synchronized void putSizesAndIndexes(Object parComp, int[] sizes, int[] ixArr, boolean isRows)
 	{
 		if (PARENT_ROWCOL_SIZES_MAP == null)    // Lazy since only if designing in IDEs
